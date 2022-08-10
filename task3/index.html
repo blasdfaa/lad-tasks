@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <main style="display: grid; place-items: center">
+    <div>Осталось попыток: <span id="attempts_output">5</span></div>
+    <form id="number_form">
+      <label for="number_input">Введите число:</label>
+      <input type="text" name="number" id="number_input" minlength="3" maxlength="5" pattern="[0-9]+" />
+      <button type="submit" id="number_submit_btn">Подтвердить</button>
+    </form>
+    <div>
+      <p>совпавших цифр не на своих местах - <b id="matching_out_place_output"></b></p>
+      <p>цифр на своих местах - <b id="matching_in_place_output"></b></p>
+    </div>
+  </main>
+  <script src="./index.js"></script>
+  <body></body>
+</html>
