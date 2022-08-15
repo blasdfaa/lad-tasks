@@ -51,7 +51,7 @@ function makeOneAttempt() {
   let outPlace = [];
 
   userNumberArray.forEach((num, index) => {
-    if (num == goalNumberArray[index]) {
+    if (num === goalNumberArray[index]) {
       inPlace.push(num);
     } else if (goalNumberArray.includes(num)) {
       outPlace.push(num);
