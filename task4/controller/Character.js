@@ -18,7 +18,7 @@ export default class Character {
   }
 
   get availableMoves() {
-    return this.moves.filter(({ isOnCooldown }) => !isOnCooldown);
+    return this._moves.filter(({ isOnCooldown }) => !isOnCooldown);
   }
 
   makeMove({ id, random = false }) {
@@ -26,6 +26,8 @@ export default class Character {
       return this.availableMoves[getRandomInt(0, this.availableMoves.length - 1)];
     }
 
+    // Так-как пользователь не сможет получить айди скилла который находится в кулдауне
+    // получать скилл можно из общего списка доступных скиллов
     return this._moves[id];
   }
 

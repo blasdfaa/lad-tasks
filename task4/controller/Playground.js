@@ -1,5 +1,12 @@
-import { renderHeroMoves, renderMonsterMove, resetGame, waitToUserMove } from "../index.js";
-import { getHealthByDifficulty, heroMoves, monsterMoves } from "../utils.js";
+import { resetGamePrint } from "../index.js";
+import {
+  getHealthByDifficulty,
+  heroMoves,
+  monsterMoves,
+  renderHeroMoves,
+  renderMonsterMove,
+  waitToUserMove,
+} from "../utils.js";
 import Character from "./Character.js";
 
 class Monster extends Character {
@@ -51,7 +58,7 @@ export default class Playground {
 
     while (true) {
       renderMonsterMove(this.hero);
-      renderHeroMoves();
+      renderHeroMoves(this.hero, this.monster);
 
       if (this.hero.health < 1) {
         alert(`Победил ${this.monster.name}`);
@@ -90,6 +97,6 @@ export default class Playground {
     this.monster = null;
     this.hero = null;
 
-    resetGame();
+    resetGamePrint();
   }
 }
